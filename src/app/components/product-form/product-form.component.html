@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <h2>{{ productId ? 'Edit Product' : 'Add Product' }}</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" class="form-control" formControlName="productName">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" id="price" class="form-control" formControlName="price">
+      </div>
+      <div class="form-group">
+        <label for="brand">Brand</label>
+        <input type="text" id="brand" class="form-control" formControlName="brand">
+      </div>
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text" id="category" class="form-control" formControlName="category">
+      </div>
+      <button type="submit" class="btn btn-success">{{ productId ? 'Update' : 'Create' }}</button>
+    </form>
+  </div>
